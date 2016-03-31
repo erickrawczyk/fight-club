@@ -1,2 +1,2 @@
 # fight-club
-I don't know exactly what this is going to be yet,  but it's gonna be something.
+some coding challenge for interns or something, I don't really know yet
