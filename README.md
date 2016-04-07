@@ -8,10 +8,7 @@ The fight is composed of multiple rounds, which run repeatedly while both charac
 
 ## Project Guidelines
 - We recommend using [Node.js](https://nodejs.org/en/) to run JavaScript on your machine.
-- Fork this repository and implement the `attackCharacter` and `runRound` functions in `fight.js`.
-- Once complete, commit your code and submit a pull request on this repository
-- We'll review your code and get back to you!
-- If you are unable to complete the project within the given timeframe, please let us know what your next steps would be if you had more time.
+- Fork this repository and implement the `attackCharacter`, `runRound`, and `endGame()` functions in `fight.js`.
 
 ## Characters
 Each character is represented by the `Character` class, where each character has properties for their name, health, attack and defense:
@@ -24,6 +21,10 @@ class Character {
     this.defense = defense; // number
   }
 }
+```
+```js
+var player = new Character('Edward Norton', 100, 25, 20);
+var enemy  = new Character('Tyler Durden', 100, 25, 20);
 ```
 
 ## Attacking
@@ -74,7 +75,11 @@ Once a character is out of health, the `endGame` function is called:
 ```js
 function endGame(winner, loser) {}
 ```
-The `endGame` function accepts two character objects, and logs end-of-game info to the console. You do NOT need to implement `endGame` - it has been written for you.
+The `endGame` function accepts two character objects, and logs end-of-game info to the console in the format:
+```
+======== GAME OVER ========
+<winnerName> wins against <loserName> with <winnerHealth> health remaining!
+```
 
 Example `endGame` output:
 ```
