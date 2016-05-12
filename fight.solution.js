@@ -2,14 +2,16 @@
 
 // Character Class definition
 class Character {
-  constructor(name, health, attack, defense) {
+  constructor(name, health, attack, defense, isNinja) {
     this.name = name;
     this.health = health;
     this.attack = attack;
     this.defense = defense;
+    this.ninja = true;
   }
 }
 
+// This is the method to attack another character
 Character.prototype.attackCharacter = function(defender) {
   var damage = this.attack - defender.defense;
   damage += Math.floor(Math.random() * 6);
